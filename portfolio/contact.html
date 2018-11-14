@@ -14,42 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!--FONTS-->
-    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
-    
-     <!--BOT PREVENTION-->
-    <script type="text/javascript">
-		
-		var label; 
-		var n1, n2, ok;
-	
-		function initAntiBot()
-		{
-			label = document.getElementById("botOperation"); //gets the ID of the label
-			
-			//generate 2 random numbers from 0 to 10
-			n1 = Math.floor(Math.random()*10+1);
-			n2 = Math.floor(Math.random()*10+1);
-		
-			//input the numbers on the label
-			label.innerHTML = n1+" + "+n2+"="; 
-			ok=n1+n2;
-			console.log(label+" = "+ok);
-		}
-		
-		function enableSend()
-		{
-			//we gather the value written on the label and if it is correct, we enable the send button
-			var result = document.getElementById("botPrevent").value;
-			
-			console.log("value: "+result+" ok: "+ok);
-			
-			if(result==ok)
-				document.getElementById("sendForm").disabled=false;
-		}
-		
-	</script>
-    
-    
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">    
 </head>
 
 <body onLoad="initAntiBot()">
@@ -74,7 +39,7 @@
                             <a class="dropdown-item" href="collabs.html">Collaborations</a>
                         </div>
                     </li>
-                    <li class="nav-item nav-link-custom"><a class="nav-link" href="index.html">Portfolio</a></li>
+                    <li class="nav-item nav-link-custom"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item nav-link-custom"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item nav-link-custom active"><a class="nav-link" href="commissions.html">Commissions  <span class="sr-only">(Active)</span></a></li>
 					<li class="nav-item nav-link-custom"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -273,6 +238,41 @@
 		}
 		
 	</script>
+    
+    
+     <!--BOT PREVENTION-->
+    <script type="text/javascript">
+		
+		var label; 
+		var n1, n2, ok;
+	
+		function initAntiBot()
+		{
+			label = document.getElementById("botOperation"); //gets the ID of the label
+			
+			//generate 2 random numbers from 0 to 10
+			n1 = Math.floor(Math.random()*10+1);
+			n2 = Math.floor(Math.random()*10+1);
+		
+			//input the numbers on the label
+			label.innerHTML = n1+" + "+n2+"="; 
+			ok=n1+n2;
+			console.log(label+" = "+ok);
+		}
+		
+		function enableSend()
+		{
+			//we gather the value written on the label and if it is correct, we enable the send button
+			var result = document.getElementById("botPrevent").value;
+			
+			console.log("value: "+result+" ok: "+ok);
+			
+			if(result==ok)
+				document.getElementById("sendForm").disabled=false;
+		}
+		
+	</script>
+    
     
     <script data-cfasync="false" type="text/javascript" src="js/form-handler.js"></script>
     
