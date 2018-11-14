@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="description" content="Sara Poveda's Portfolio">
+    <meta name="author" content="Sara Poveda">
+    <title>Sarya - Art by Sara Poveda</title>
+    <!--BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--CUSTOM STYLES-->
+    <link rel="stylesheet" href="css/full-slider.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+    
+     <!--BOT PREVENTION-->
+    <script type="text/javascript">
+		
+		var label; 
+		var n1, n2, ok;
+	
+		function initAntiBot()
+		{
+			label = document.getElementById("botOperation"); //gets the ID of the label
+			
+			//generate 2 random numbers from 0 to 10
+			n1 = Math.floor(Math.random()*10+1);
+			n2 = Math.floor(Math.random()*10+1);
+		
+			//input the numbers on the label
+			label.innerHTML = n1+" + "+n2+"="; 
+			ok=n1+n2;
+			console.log(label+" = "+ok);
+		}
+		
+		function enableSend()
+		{
+			//we gather the value written on the label and if it is correct, we enable the send button
+			var result = document.getElementById("botPrevent").value;
+			
+			console.log("value: "+result+" ok: "+ok);
+			
+			if(result==ok)
+				document.getElementById("sendForm").disabled=false;
+		}
+		
+	</script>
+    
+    
+</head>
+
+<body onLoad="initAntiBot()">
+
+    <!--NAVIGATION BAR-->
+	<header>
+    
+    	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toCollapse" aria-controls="toCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="custom-title">Sarya - The Art of Sara Poveda</span></a>
+                
+                <!--NAVIGATION TO COLLAPSE-->
+            <div class="collapse navbar-collapse" id="toCollapse">
+                <ul class="nav navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="active nav-item nav-link-custom"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown nav-link-custom"><a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                    	<div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        	<a class="dropdown-item" href="bio.html">Bio</a>
+                            <a class="dropdown-item" href="collabs.html">Collaborations</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-link-custom"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item nav-link-custom"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item nav-link-custom active"><a class="nav-link" href="commissions.html">Commissions  <span class="sr-only">(Active)</span></a></li>
+					<li class="nav-item nav-link-custom"><a class="nav-link" href="contact.html">Contact</a></li>
+                	<li class="nav-item dropdown nav-link-custom"><a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shops</a>
+                    	<div class="dropdown-menu" aria-labelledby="shopDropdown">
+                        	<a class="dropdown-item" href="https://www.redbubble.com/es/people/sarapoveda">RedBubble</a>
+                            <a class="dropdown-item" href="https://www.teepublic.com/user/sarya">TeePublic</a>
+                        </div>
+                    </li>
+            	</ul>
+            </div>
+        </div>
+        </nav>
+       
+    </header>
+
+	<!--MAIN CONTENT-->
+    <main>
+    
+     	<div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="img/contactbg.png"> 
+      
+		<!--Parallax bg-->
+		<br>
+		<br>
+		<br>
+		<div class="container">
+			<div class="jumbotron">
+				
+				<div class="row">
+					<div class="col-7">
+						<!--Contact Form-->
+						<form method="post" class="gform" action="https://script.google.com/macros/s/AKfycbzSHa2AGBsV8uoiX_AGIhDefWEmGr4nM0vgeFf8rw/exec">
+							<div class="form-group">
+								<label for="contactName" aria-labelledby="ContactName" class="col-2 col-form-label">Name*</label>
+								<div class="col-10">
+									<input type="text" name="name" class="form-control" id="contactName" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contactMail" aria-labelledby="ContactMail" class="col-2 col-form-label">E-mail*</label>
+								<div class="col-sm-10">
+										<input type="email" name="email" class="form-control" id="contactMail" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contactTopic" aria-labelledby="ContactTopic" class="col-2 col-form-label">Topic*</label>
+								<div class="col-sm-10">
+									<input type="text" name="topic" class="form-control" id="contactTopic" required>
+								</div>
+							</div>
+                            <div class="form-group">
+								<label for="contactText" aria-labelledby="ContactText" class="col-2 col-form-label">Text*</label>
+								<div class="col-sm-10">
+									<textarea class="form-control" name="message" id="contactText" rows="6" required></textarea>
+								</div>
+							</div>
+                            <!--BOT PREVENTION-->
+                            <div class="form-group">
+                            	<div class="row">
+                                    <label id="botOperation" for="botPrevent" aria-labelledby="botPrevention" class="col-2 form-label"></label>
+                                    <div class="col-2">
+                                        <input type="number" class="form-control" id="botPrevent" onBlur="enableSend()" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--BOT PREVENTION END-->
+							<div class="text-center">
+								<input type="submit" id="sendForm" class="btn btn-outline-secondary" value="Send" onBlur="" onClick="validate()" disabled>
+							</div>
+						</form>
+					</div>
+					
+					<!--Contact Info-->
+					<div class="col">
+						<h3 class="custom-title">Contact Info</h3>
+						<p><span class="font-weight-bold">Sara Poveda</span> <br> sara.poveda.art@gmail.com</p>
+                        <br>
+                        <br>
+                        
+                        <!--- FORM VALIDATION MESSAGES --->
+                        <div class="validation">
+                        	<p id="success" class="text-success" style="display:none"><small>All information filled correctly. E-mail sent.</small></p>
+                        	<!--<p id="noName" class="text-danger" style="display:none"><small>The "Name" section is empty.</small></p>
+                            <p id="noMail" class="text-danger" style="display:none"><small>The "E-mail" section is empty or invalid.</small></p>
+                            <p id="noTopic" class="text-danger" style="display:none"><small>The "Topic" section is empty.</small></p>
+                            <p id="noText" class="text-danger" style="display:none"><small>The "Text" section is empty.</small></p>-->
+                        </div>
+					</div>
+			</div>
+			</div> <!--END JUMBOTRON-->
+			
+			<br>
+			<br>
+			<br>
+
+	</div>
+		  
+    </div> <!--Container end-->
+
+	
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-light">Copyright &copy; Sara Poveda 2018
+        <br>
+            	<a href="https://www.facebook.com/sarapovedaart/"><span class="fa fa-facebook social footer-social"></span></a>&nbsp;
+                <a href="https://twitter.com/SaryaArt"><span class="fa fa-twitter social footer-social"></span></a>&nbsp;
+                <a href="https://saryaart.tumblr.com"><span class="fa fa-tumblr social footer-social"></span></a>&nbsp;
+                <a href="https://www.youtube.com/user/PovedaSara"><span class="fa fa-youtube social footer-social"></span></a>&nbsp;
+                <a href="https://www.instagram.com/sarya.art/"><span class="fa fa-instagram social footer-social"></span></a>&nbsp;
+                <a href="https://www.behance.net/SaraPoveda"><span class="fa fa-behance social footer-social"></span></a>&nbsp;
+                <a href="https://www.linkedin.com/in/sarapoveda/"><span class="fa fa-linkedin social footer-social"></span></a>    
+            </p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    
+	<!-- JAVASCRIPT -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	
+    <!--VALIDATION-->
+	<script type="text/javascript">
+	
+		function validate()
+		{
+			var name = document.getElementById("contactName").value;
+			var mail = document.getElementById("contactMail").value;
+			var topic = document.getElementById("contactTopic").value;
+			var text = document.getElementById("contactText").value;
+			var validated=false, validName, validMail, validTopic, validText;
+			
+			console.log("name: "+name);
+			console.log("mail: "+mail);
+			console.log("topic: "+topic);
+			console.log("text: "+text);
+			
+			//if the name or value is empty or incorrect
+			if(name==null || name.lenght==0)
+			{
+				//document.getElementById("noName").style.display='block';
+				console.log("Invalid name");
+			}
+			else
+			{
+				//document.getElementById("noName").style.display='none';
+				validName=true;
+			}
+			
+			//if the mail is empty or incorrect
+			if(!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mail)))
+			{
+				//document.getElementById("noMail").style.display='block';
+				console.log("Invalid mail");
+			}
+			else
+			{
+				//document.getElementById("noMail").style.display='none';
+				validMail=true;
+			}
+			
+			//if the topic is empty
+			if(topic==null || topic.length==0)
+			{
+				//document.getElementById("noTopic").style.display='block';
+				console.log("Empty Topic");
+			}
+			else
+			{
+				//document.getElementById("noTopic").style.display='none';
+				validTopic=true;
+			}
+			
+			//if the text is empty
+			if(text==null || text.length==0)
+			{
+				//document.getElementById("noText").style.display='block';
+				console.log("Empty Text");
+			}
+			else
+			{
+				//document.getElementById("noText").style.display='none';
+				validText=true;
+			}
+			
+			if(validName==true && validMail==true && validTopic==true && validText==true)
+			{
+				validated=true;
+				document.getElementById("success").style.display='block';
+			}
+				
+		}
+		
+	</script>
+    
+    <script data-cfasync="false" type="text/javascript" src="js/form-handler.js"></script>
+    
+</body>
+</html>
