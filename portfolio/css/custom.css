@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*@media (min-width: 700px)
+@media (min-width: 700px)
 {
 	html
 	{
 		font-size: 2rem;
 	}
-}*/
+}
 
 body{ 
 		padding-top: 50px !important; 
@@ -77,3 +77,4 @@ a, a:hover{
 {
 	color: white;
 	font-size: 18px;
+}
