@@ -45,6 +45,11 @@ a, a:hover{
 	padding: 15px;
 }
 
+.collab-elem
+{
+	margin: 15px;
+}
+
 
 /*-- PARALLAX --*/
 .parallax{
