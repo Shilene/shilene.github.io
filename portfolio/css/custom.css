@@ -40,6 +40,13 @@ a, a:hover{
 	color: #735719 !important;
 }
 
+.collab-img
+{
+	padding: 15px;
+}
+
+
+/*-- PARALLAX --*/
 .parallax{
 	background-image: url('img/contactbg.png');
     /* Full height */
