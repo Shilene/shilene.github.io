@@ -68,24 +68,32 @@
      </div>
             
     <!-- GALLERY -->
-    <!--NAVIGATION-->
-    <ul class="gridder clearfix">
-         <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
-        <li class="gridder-list" data-griddercontent="#content1">
-            <img class="img-fluid" src="http://placehold.it/300" />
-        </li>
-        <li class="gridder-list" data-griddercontent="#content2">
-            <img class="img-fluid" src="http://placehold.it/300" />
-        </li>
-        <li class="gridder-list" data-griddercontent="#content3">
-            <img class="img-fluid" src="http://placehold.it/300" />
-        </li>
-   </ul>
+    <div class="row">
+        <!--NAVIGATION-->
+        <ul class="gridder clearfix">
+             <!-- You can load specify which content is loaded by specifying the #ID of the div where the content is  -->
+             <div class="col-xs-6 col-sm-3">
+                <li class="gridder-list" data-griddercontent="#content1">
+                    <img class="img-fluid" src="http://placehold.it/300" />
+                </li>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <li class="gridder-list" data-griddercontent="#content2">
+                    <img class="img-fluid" src="http://placehold.it/300" />
+                </li>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <li class="gridder-list" data-griddercontent="#content3">
+                    <img class="img-fluid" src="http://placehold.it/300" />
+                </li>
+            </div>
+       </ul>
+   </div>
 
     <!-- CONTENT -->
     <div id="content1" class="gridder-content">
         <div class="row"> 
-            <div class="col-sm-7">
+            <div class="col-xs-9 col-sm-7">
                 <img class="img-fluid" src="http://placehold.it/400" />
             </div> 
             <div class="col-sm-4 offset-sm-1">
